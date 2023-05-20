@@ -1,0 +1,33 @@
+.blood-inventory-container {
+    margin: 50px auto;
+    max-width: 800px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  thead {
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
