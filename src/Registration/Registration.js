@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import axios from 'axios';
 import './Registration.css';
 
 const Registration = () => {
@@ -10,10 +11,17 @@ const Registration = () => {
     confirmPassword: ''
   };
 
-  const onSubmit = (values, { setSubmitting }) => {
-    // Handle submit logic here 
-    console.log(values);
-    setSubmitting(false);
+  const onSubmit = async (values, { setSubmitting }) => {
+    try {
+      const response = await axios.post('http://localhost:3005/backend/register', values);
+      console.log(response.data);
+      // Handle success logic here
+    } catch (error) {
+      console.error(error);
+      // Handle error logic here
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const validate = (values) => {
