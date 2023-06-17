@@ -5,7 +5,7 @@ import './Home.css';
 export default function Home() {
   return (
     <div className="home-page-container">
-      <h1>Welcome to Life Bank!</h1>
+      <h1>Welcome to Blood Management System!</h1>
       <div className="home-page-link-container">
         <Link to="/user-registration" className="home-page-link">
           User Registration
